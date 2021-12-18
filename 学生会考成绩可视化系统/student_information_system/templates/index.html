@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>会考系统</title>
+	<style type="text/css">
+	.robot-index[data-v-868cab82],.robot-index *[data-v-868cab82]{-webkit-tap-highlight-color:transparent}.robot-index[data-v-868cab82],.robot-index *[data-v-868cab82],.robot-index[data-v-868cab82] :after,.robot-index[data-v-868cab82] :before{-webkit-box-sizing:border-box;box-sizing:border-box}.robot[data-v-868cab82]{position:fixed;z-index:99;float:right;right:50px;bottom:20px}.robot-eye[data-v-868cab82]{position:absolute;cursor:pointer;margin-right:-87px;z-index:999;margin-top:11px}.robot-show[data-v-868cab82]{height:500px;width:350px;float:right;position:fixed;right:100px;bottom:70px;z-index:9999}.bubble[data-v-868cab82]{-webkit-box-shadow:0 0 3px #bba4a4;box-shadow:0 0 3px #bba4a4;background-color:#fff;height:80px;width:200px;border-radius:5px;padding:8px 10px;font-size:14px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:22px;opacity:0;-webkit-transition:all .3s linear;transition:all .3s linear}.bubble-show[data-v-868cab82],.bubble-show[data-v-868cab82]:before{opacity:1!important}.bubble[data-v-868cab82]:before{position:absolute;left:40px;top:76px;content:" ";width:0;height:0;opacity:0;border:10px solid;border-color:#fff transparent transparent transparent;-webkit-transform:rotate(-16deg);transform:rotate(-16deg)}.index-css[data-v-868cab82]{position:relative;top:-15px;height:124px;width:90px;cursor:pointer;margin-right:110px}.ok-span[data-v-868cab82]{margin-top:-97px}.cancel-span[data-v-868cab82],.ok-span[data-v-868cab82]{color:#fff;position:absolute;right:0;opacity:0;cursor:pointer;margin-right:-31px;background-color:#099ce1;padding:5px;border-radius:0 5px 5px 0}.cancel-span[data-v-868cab82]{margin-top:-59px}
+	</style>
+</head>
+	<h2>欢迎来到会考系统</h2>
+<body>
+	<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#ffffff">
+	<script src="/static/js/snowflakes.min.js"></script>
+	<script src="/static/js/index.js"></script>
+	<h3>系统使用教程</h3>
+	<ul>
+		<li>输入：http://127.0.0.1:7777/student/考生号   可视化查看考生会考成绩</li>
+		<li>比如输入：http://127.0.0.1:7777/student/194023011173   可查看考号为194023011173的考生会考成绩</li>
+	</ul>
+	<h3>示例结果</h3>
+	<img src="/static/images/demo.png" width="700" height="500"/>
+	<div data-v-868cab82="" class="robot-index">
+		<div data-v-868cab82="" class="robot" id="myRobot">
+			<div data-v-868cab82="" class="bubble">
+			<<pseudo:before>></<pseudo:before>>
+			欢迎来到会考系统!
+			</div>
+			<img data-v-868cab82="" src="/static/images/robot-eye.gif" class="robot-eye">
+			<img data-v-868cab82="" src="/static/images/robot-no-eye.png" class="index-css" onclick="robot_click();">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function robot_click(){
+	   alert("点我干啥呀！");
+	}
+</script>
+</html>	

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>会考系统</title>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <link rel="stylesheet" href="/static/css/snow_style.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+    <style type="text/css">
+    .robot-index[data-v-868cab82],.robot-index *[data-v-868cab82]{-webkit-tap-highlight-color:transparent}.robot-index[data-v-868cab82],.robot-index *[data-v-868cab82],.robot-index[data-v-868cab82] :after,.robot-index[data-v-868cab82] :before{-webkit-box-sizing:border-box;box-sizing:border-box}.robot[data-v-868cab82]{position:fixed;z-index:99;float:right;right:50px;bottom:20px}.robot-eye[data-v-868cab82]{position:absolute;cursor:pointer;margin-right:-87px;z-index:999;margin-top:11px}.robot-show[data-v-868cab82]{height:500px;width:350px;float:right;position:fixed;right:100px;bottom:70px;z-index:9999}.bubble[data-v-868cab82]{-webkit-box-shadow:0 0 3px #bba4a4;box-shadow:0 0 3px #bba4a4;background-color:#fff;height:80px;width:200px;border-radius:5px;padding:8px 10px;font-size:14px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:22px;opacity:0;-webkit-transition:all .3s linear;transition:all .3s linear}.bubble-show[data-v-868cab82],.bubble-show[data-v-868cab82]:before{opacity:1!important}.bubble[data-v-868cab82]:before{position:absolute;left:40px;top:76px;content:" ";width:0;height:0;opacity:0;border:10px solid;border-color:#fff transparent transparent transparent;-webkit-transform:rotate(-16deg);transform:rotate(-16deg)}.index-css[data-v-868cab82]{position:relative;top:-15px;height:124px;width:90px;cursor:pointer;margin-right:110px}.ok-span[data-v-868cab82]{margin-top:-97px}.cancel-span[data-v-868cab82],.ok-span[data-v-868cab82]{color:#fff;position:absolute;right:0;opacity:0;cursor:pointer;margin-right:-31px;background-color:#099ce1;padding:5px;border-radius:0 5px 5px 0}.cancel-span[data-v-868cab82]{margin-top:-59px}
+    </style>
+</head>
+<body>
+    <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#ffffff">
+    <script src="/static/js/snowflakes.min.js"></script>
+    <script src="/static/js/index.js"></script>
+    <h2 style="text-align:left;margin:35px 0;">考生号：{{kaosheng_number}}</h2>
+    <div id="46c7fde2acf747e4b8e16b3e8f355b40" class="chart-container" style="width:880px; height:570px;"></div>
+    <script>
+        var chart_46c7fde2acf747e4b8e16b3e8f355b40 = echarts.init(
+            document.getElementById('46c7fde2acf747e4b8e16b3e8f355b40'), 'dark', {renderer: 'canvas'});
+        var option_46c7fde2acf747e4b8e16b3e8f355b40 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "bar",
+            "name": "各科会考成绩",
+            "legendHoverLink": true,
+            "data": [
+                {{geography}},
+                {{chemistry}},
+                {{IT}},
+                {{history}},
+                {{biology}},
+                {{mathematics}},
+                {{general_technique}},
+                {{physics}},
+                {{english}},
+                {{chinese}},
+                {{politics}}
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "各科会考成绩"
+            ],
+            "selected": {
+                "各科会考成绩": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "show": true,
+                "position": "top",
+                "rotate": 30,
+                "margin": 8
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u5730\u7406",
+                "\u5316\u5b66",
+                "\u4fe1\u606f\u6280\u672f",
+                "\u5386\u53f2",
+                "\u751f\u7269",
+                "\u6570\u5b66",
+                "\u901a\u7528\u6280\u672f",
+                "\u7269\u7406",
+                "\u82f1\u8bed",
+                "\u8bed\u6587",
+                "\u653f\u6cbb"
+            ]
+        }
+    ],
+    "title": [
+        {
+            "text": "\u8003\u751f\u6210\u7ee9\u8868",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_46c7fde2acf747e4b8e16b3e8f355b40.setOption(option_46c7fde2acf747e4b8e16b3e8f355b40);
+    </script>
+    <br/>
+    <div id="0dcdb956791943e084d34c5216a54b0a" class="chart-container" style="width:880px; height:570px;"></div>
+    <script>
+        var chart_0dcdb956791943e084d34c5216a54b0a = echarts.init(
+            document.getElementById('0dcdb956791943e084d34c5216a54b0a'), 'dark', {renderer: 'canvas'});
+        var option_0dcdb956791943e084d34c5216a54b0a = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,                                
+            "data": [
+                {
+                    "name": "\u5730\u7406",
+                    "value": {{geography}}
+                },
+                {
+                    "name": "\u5316\u5b66",
+                    "value": {{chemistry}}
+                },
+                {
+                    "name": "\u4fe1\u606f\u6280\u672f",
+                    "value": {{IT}}
+                },
+                {
+                    "name": "\u5386\u53f2",
+                    "value": {{history}}
+                },
+                {
+                    "name": "\u751f\u7269",
+                    "value": {{biology}}
+                },
+                {
+                    "name": "\u6570\u5b66",
+                    "value": {{mathematics}}
+                },
+                {
+                    "name": "\u901a\u7528\u6280\u672f",
+                    "value": {{general_technique}}
+                },
+                {
+                    "name": "\u7269\u7406",
+                    "value": {{physics}}
+                },
+                {
+                    "name": "\u82f1\u8bed",
+                    "value": {{english}}
+                },
+                {
+                    "name": "\u8bed\u6587",
+                    "value": {{chinese}}
+                },
+                {
+                    "name": "\u653f\u6cbb",
+                    "value": {{politics}}
+                }
+            ],
+            "radius": [
+                "40%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "area",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}:{c}"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u5730\u7406",
+                "\u5316\u5b66",
+                "\u4fe1\u606f\u6280\u672f",
+                "\u5386\u53f2",
+                "\u751f\u7269",
+                "\u6570\u5b66",
+                "\u901a\u7528\u6280\u672f",
+                "\u7269\u7406",
+                "\u82f1\u8bed",
+                "\u8bed\u6587",
+                "\u653f\u6cbb"
+            ],
+            "selected": {}
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    }
+};
+        chart_0dcdb956791943e084d34c5216a54b0a.setOption(option_0dcdb956791943e084d34c5216a54b0a);
+    </script>
+    <div data-v-868cab82="" class="robot-index">
+        <div data-v-868cab82="" class="robot" id="myRobot">
+            <div data-v-868cab82="" class="bubble">
+            <<pseudo:before>></<pseudo:before>>
+            欢迎来到会考系统!
+            </div>
+            <img data-v-868cab82="" src="/static/images/robot-eye.gif" class="robot-eye">
+            <img data-v-868cab82="" src="/static/images/robot-no-eye.png" class="index-css" onclick="robot_click();">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function robot_click(){
+       alert("点我干啥呀！");
+    }
+</script>
+</html>	
