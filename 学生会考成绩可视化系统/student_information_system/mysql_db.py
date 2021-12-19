@@ -11,6 +11,11 @@
 
 import pymysql
 from config import *
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
+logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s: %(message)s')
+logger = logging.getLonger(__name__)
 
 
 class MySQLClient(object):
@@ -45,7 +50,7 @@ class MySQLClient(object):
 				print('Successfully!')
 				self.db.commit()
 		except Exception as e:
-			print(e.args)
+			logger.error(e)
 			self.db.rollback()
 		self.db.close()
 
@@ -59,7 +64,7 @@ class MySQLClient(object):
 				print('Delete Successfully!')
 				self.db.commit()
 		except Exception as e:
-			print(e.args)
+			logger.error(e)
 		self.db.close()
 
 	def get_student_data(self,student_id):
@@ -72,11 +77,9 @@ class MySQLClient(object):
 				results = self.cursor.fetchone()	#元组返回
 				student_grade = []
 				[student_grade.append(result) for result in results]
-				# print(student_grade)
 				return student_grade
-
 		except Exception as e:
-			print(e.args)
+			logger.error(e)
 
 
 if __name__ == '__main__':

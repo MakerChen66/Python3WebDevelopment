@@ -19,6 +19,6 @@ MYSQL_HOST = 'localhost'
 
 MYSQL_USER = 'root'
 
-MYSQL_PASSWORD = '193989crh.'
+MYSQL_PASSWORD = 'MYSQL_PASSWORD'
 
 MYSQL_DB = 'exam_of_students'
